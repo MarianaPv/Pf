@@ -1,0 +1,69 @@
+	.main {
+		display: 'flex';
+        margin-left: 36vw;
+        margin-right: 36vw;
+        height: 50vh;
+        background-color: whitesmoke;
+        
+        
+
+    }
+
+    .claseUno{
+        align-items: 'center';
+        margin-left: 11.5vw;  
+        font-family: "sans-serif";
+        margin-top: 10vh;
+        margin-bottom: 8vh;
+        font-family: "Arial";
+    }
+    
+	.paper{
+		margin-top: 17vh;
+		display: 'flex';
+		flex-direction: 'column';
+        align-items: 'center';
+        height: 40vh;
+
+	}
+    
+    .MuiInput-root{
+        width: 90%;
+    }
+    
+    .MuiInput-underline{
+        width: 90%;
+        margin-bottom: 6vh;
+    }
+    
+    .form {
+		width: '50%';
+        margin-top: 15vh;
+        margin-left: 5vh;
+        margin-top: 0vh;
+        height:100%;
+
+        
+    }
+
+    
+	.submit {
+        
+        margin-bottom: 1vh;
+        color: white;
+        background: rgb(104, 182, 218);
+        width: 90%;
+        height:5vh;
+        border-radius: 0%;
+        font-family: "Arial";
+    }
+    
+	.submit2 {
+        margin-bottom: 2vh;
+        color: white;
+        background: rgb(86, 137, 160);
+        width: 90%;
+        height:5vh;
+        border-radius: 0%;
+        font-family: "Arial";
+	}

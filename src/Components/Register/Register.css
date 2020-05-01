@@ -1,0 +1,58 @@
+.main2 {
+    display: 'flex';
+    margin-left: 36vw;
+    margin-right: 36vw;
+    height: 63vh;
+    background-color: whitesmoke;
+    
+    
+
+}
+
+.paper2{
+    margin-top: 16vh;
+    display: 'flex';
+    flex-direction: 'column';
+    align-items: 'center';
+    padding: 10px;
+    
+}
+    
+.claseUno2{
+        align-items: 'center';
+        margin-left: 10vw;  
+        font-family: "sans-serif";
+        margin-top: 0vh;
+        margin-bottom: 6vh;
+        font-family: "Arial";
+    }
+
+.form2 {
+    width: '50%';
+    margin-top: 15vh;
+    margin-left: 5vh;
+    margin-top: 0vh;
+    height:100%;
+}
+
+
+.submit3 {
+        
+    margin-bottom: 1vh;
+    color: white;
+    background: rgb(104, 182, 218);
+    width: 90%;
+    height:5vh;
+    border-radius: 0%;
+    font-family: "Arial";
+}
+
+.submit4 {
+    margin-bottom: 2vh;
+    color: white;
+    background: rgb(86, 137, 160);
+    width: 90%;
+    height:5vh;
+    border-radius: 0%;
+    font-family: "Arial";
+}
