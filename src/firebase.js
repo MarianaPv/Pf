@@ -1,7 +1,10 @@
-import firebase from 'firebase'
+import * as firebase from 'firebase';
 import app from 'firebase/app'
 import 'firebase/auth'
 import 'firebase/firebase-firestore'
+import 'firebase/firestore'
+import 'firebase/firebase-app';
+import 'firebase/firebase-storage';
 
   // Your web app's Firebase configuration
   const config = {
@@ -15,9 +18,6 @@ import 'firebase/firebase-firestore'
     measurementId: "G-M9N1B9VFSN"
   };
   
-
-
-   
 
 class Firebase {
 	constructor() {

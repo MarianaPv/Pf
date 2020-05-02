@@ -14,11 +14,14 @@ function Navigation(props) {
       <section>
         <header>
           <div className="navBox">
-            <ul className="extra">
+            <ul className="extra" >
               <li>
-                <Link to={ROUTES.HOME}>Home</Link>
+                <Link to={ROUTES.HOME}>Productos en Almacén</Link>
+                
               </li>
-             
+              <li>
+                <Link to={ROUTES.STATS}>Stats</Link>
+              </li>
               <li>
                 <Link to={ROUTES.HOMEPAGE}>Volver</Link>
               </li>

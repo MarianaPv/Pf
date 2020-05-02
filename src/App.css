@@ -6,8 +6,6 @@ body,
     box-sizing: border-box;
 }
 
-$blue_theme: #70a1ff;
-//Root Container
 .root-container {
     width: 100%;
     height: 100%;

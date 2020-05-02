@@ -1,0 +1,28 @@
+.principal{
+    display: flex;
+    margin-left: 20vw;
+    width:60vw;
+    height: 40vh;
+
+}
+
+.tableClosed {
+    width: 100%;
+    text-align: center;
+    border-collapse: collapse;
+    border: 1px solid black;
+    margin-top: 5vh;
+  }
+  td,
+  th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+    border: 1px solid black;
+    text-align: center;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+  
