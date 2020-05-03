@@ -5,19 +5,21 @@ import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import Inventario from './Components/Inventario/index'
 import Stats from './Components/Stats/Stats'
-import { MuiThemeProvider, createMuiTheme } from '@material-ui/core/styles'
 import { CssBaseline, CircularProgress } from '@material-ui/core'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import firebase from './firebase'
-import 'firebase/firestore'
-
-
   
+import app from "firebase/app";
+import "firebase/auth";
+import "firebase/firebase-firestore";
+import "firebase/firebase-database";
+import "firebase/storage";
+import "firebase/messaging";
 
 function App() {
 
 	const [firebaseInitialized, setFirebaseInitialized] = useState(false)
-  
+
 
 	useEffect(() => {
 		firebase.isInitialized().then(val => {
@@ -25,6 +27,7 @@ function App() {
 		});
   })
   
+
 	return firebaseInitialized !== false ? (
 		<div>
 			<CssBaseline />

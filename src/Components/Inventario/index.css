@@ -1,17 +1,23 @@
 .principal{
     display: flex;
-    margin-left: 20vw;
-    width:60vw;
+    margin-left: 15vw;
+    width:70vw;
     height: 40vh;
 
 }
 
+.mensaje{
+    margin-top: 5vh;
+    margin-left: 10vw;
+    font-family: "Roboto";
+    font-size:23px;
+}
 .tableClosed {
     width: 100%;
     text-align: center;
     border-collapse: collapse;
     border: 1px solid black;
-    margin-top: 5vh;
+    margin-top: 10vh;
   }
   td,
   th {

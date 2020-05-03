@@ -1,10 +1,11 @@
-import * as firebase from 'firebase';
+import firebase from 'firebase';
 import app from 'firebase/app'
 import 'firebase/auth'
-import 'firebase/firebase-firestore'
+import react from 'react'
 import 'firebase/firestore'
-import 'firebase/firebase-app';
-import 'firebase/firebase-storage';
+import "firebase/firebase-database";
+import 'firebase/storage';
+
 
   // Your web app's Firebase configuration
   const config = {
@@ -23,7 +24,9 @@ class Firebase {
 	constructor() {
 		app.initializeApp(config)
 		this.auth = app.auth()
-		this.db = app.firestore()
+		this.db = app.database()
+		this.storage = app.storage();
+
 	}
 
 	login(email, password) {
@@ -55,4 +58,4 @@ class Firebase {
 
 }
 
-export default new Firebase()
+export default new Firebase();

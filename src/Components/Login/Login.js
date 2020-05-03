@@ -1,7 +1,5 @@
 import React, { useState } from 'react'
-import {Button, Input, InputLabel } from '@material-ui/core'
-import LockOutlinedIcon from '@material-ui/icons/LockOutlined'
-import withStyles from '@material-ui/core/styles/withStyles'
+import {Input, InputLabel } from '@material-ui/core'
 import { Link, withRouter } from 'react-router-dom'
 import * as ROUTES from "../../Routes/Routes.js";
 import firebase from '../../firebase'
