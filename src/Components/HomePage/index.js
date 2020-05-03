@@ -10,6 +10,7 @@ function HomePage(props) {
 	
 
 	return (
+        <div className = "bodyb">
 		<main className="main1">
 			<div className="paper1">
     				<div>¡BIENVENIDO!</div>
@@ -38,6 +39,7 @@ function HomePage(props) {
 				
 			</div>
 		</main>
+        </div>
 	)
 }
 

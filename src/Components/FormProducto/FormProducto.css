@@ -1,0 +1,62 @@
+.mensaje2{
+    margin-top: 5vh;
+    margin-left: 9vw;
+    font-family: 'Jost', sans-serif;
+    font-size:20px;
+}
+
+.sheet{
+    margin-top: 5vh;
+    margin-left: 9vw;
+    display: flex;
+    flex-direction: 'column';
+    font-family: 'Jost', sans-serif;
+    font-size:18px;
+    width: 80vw;
+    height: 50vh;
+    background: rgb(228, 230, 240);
+    border-radius: 15px;
+}
+
+.afuera{    
+    display: flex;
+    flex-direction:'column';
+    margin-left: 2vw; 
+    margin-bottom:2vh;
+}
+
+.formato{
+    margin-top: 2vh;
+    margin-bottom:2vh;
+}
+.fill{
+    margin-top: 2vh;
+    margin-bottom:2vh;
+    margin-left:2vw;
+}
+
+
+
+.especificacion{
+    color: rgb(128, 129, 131);
+    font-size:15px;
+    
+}
+
+.botoncito2{
+    background: #00acee;
+    color:rgb(252, 249, 249);
+    font-family: 'Jost', sans-serif;
+    width:7vw;
+    height:3.5vh;
+    font-weight: "bold";
+    border-radius: 8px;
+    border: none;
+    outline: none;
+}
+
+.botoncito2:hover{
+    transition: 0.5s;
+    background-color: #5093b9;
+  cursor:pointer;
+}

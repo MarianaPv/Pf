@@ -20,10 +20,10 @@ function Navigation(props) {
                 
               </li>
               <li>
-                <Link to={ROUTES.STATS}>Stats</Link>
+                <Link to={ROUTES.AGREGAR}>Agregar Productos</Link>
               </li>
               <li>
-                <Link to={ROUTES.HOMEPAGE}>Volver</Link>
+                <Link to={ROUTES.PERFIL}>Mi Perfil</Link>
               </li>
             </ul>
           </div>

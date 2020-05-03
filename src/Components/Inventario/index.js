@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { withRouter } from 'react-router-dom'
 import Navigation from "../NavBar/Navigation";
 import * as ROUTES from "../../Routes/Routes.js";
-import { Dropdown, Menu } from 'semantic-ui-react'
 import "firebase/database";
 import './index.css'
 
@@ -17,21 +16,21 @@ function Home(){
     const [add, setAdd] = useState("")    
     const [sub, setSub] = useState("") 
     const [original, setOriginal] = useState("1530")
-
-    const options = [
-        { key: 1, text: 'Choice 1', value: 1 },
-        { key: 2, text: 'Choice 2', value: 2 },
-        { key: 3, text: 'Choice 3', value: 3 },
-    ]
-
+    
 
 
     const handleSubmit = () =>{
-        const valorInicial = () =>{
-            setOriginal(original-sub+add);
+        
+        
+        if(add>0){
+            setOriginal(original-sub+parseInt(add));
+        }else{
+            
+            setOriginal(original-sub);
         }
-
+        
         if ((add-sub)<original){
+            console.log(add-sub)
         let resumen= {
             "cantidad en almacen":original,
             "cantidad retirada" :sub,
@@ -42,9 +41,11 @@ function Home(){
         firebase.database().ref('messages').push(resumen);
 
         }else{
+
             alert("¡Se intenta retirar más de la cantidad disponible de producto!");
         }
     }
+    
     
 
     return(
@@ -68,7 +69,8 @@ function Home(){
                 <th>1 </th>
                 <th> TUBO</th>
                 <th> TUBO ESTRIADO CRUDO 1/2" FT-113</th>
-    <th>{original}</th>
+    <th>{original}
+ </th>
                 <th>
                     <input type = "text" onChange ={e => setSub(e.target.value)} id="inputText"/>
                     
@@ -79,11 +81,13 @@ function Home(){
                     
                 </th>
                 <th>
-                <Menu compact>
-    <Dropdown text='Dropdown' options={options} simple item />
-  </Menu>
+                <select>
+                    <option value="litro">litro</option>
+                    <option value="mililitro">mililitro</option>
+                    <option value="metro">metro</option>
+                </select>
                 </th>
-                <th><button onClick = {handleSubmit}>Guardar</button></th>
+                <th><button className="botoncito" onClick = {handleSubmit}>Guardar</button></th>
                 
             </tr>
         </table>

@@ -4,7 +4,8 @@ import HomePage from './Components/HomePage/index'
 import Login from './Components/Login/Login'
 import Register from './Components/Register/Register'
 import Inventario from './Components/Inventario/index'
-import Stats from './Components/Stats/Stats'
+import Agregar from './Components/FormProducto/FormProduct'
+import Perfil from './Components/Perfil/Perfil'
 import { CssBaseline, CircularProgress } from '@material-ui/core'
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
 import firebase from './firebase'
@@ -37,7 +38,8 @@ function App() {
 					<Route exact path="/login" component={Login} />
           <Route exact path="/register" component={Register} />
           <Route exact path="/home" component={Inventario} />
-          <Route exact path="/stats" component={Stats} />
+          <Route exact path="/agregar-productos" component={Agregar} />
+          <Route exact path="/mi-perfil" component={Perfil} />
 				</Switch>
 			</Router>
       </div>
