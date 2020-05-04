@@ -1,30 +1,45 @@
-	.main {
+.bodyb1 {
+    justify-content: center; 
+    align-content: center;
+    align-items: center;
+    margin:0;
+    padding:0;
+    display: flex;
+    height: 100vh;
+    width:100vw;
+    background: url(warehouse4.png);
+    background-size: cover;
+    
+  }
+
+    .main {
 		display: 'flex';
-        margin-left: 36vw;
-        margin-right: 36vw;
         height: 50vh;
-        background-color: whitesmoke;
-        
+        background-color: rgba(245, 245, 245, 0.801);
+        width: 25vw;
         box-shadow: 1px 1px 8px 3px #888888;
+        font-family: 'Jost', sans-serif;
+        border-radius: 15px;
 
     }
 
     .claseUno{
-        align-items: 'center';
-        margin-left: 11.5vw;  
+        justify-content: center;               
+        display: flex;
         font-family: "sans-serif";
-        margin-top: 10vh;
-        margin-bottom: 8vh;
-        font-family: "Arial";
+        margin-top: 0vh;
+        margin-bottom: 5vh;
+        font-family: 'Jost', sans-serif;
     }
     
 	.paper{
-		margin-top: 17vh;
+		margin-top: 1.5vh;
 		display: 'flex';
 		flex-direction: 'column';
         align-items: 'center';
+        justify-content: center;
         height: 40vh;
-
+        font-family: 'Jost', sans-serif;
 	}
     
     .MuiInput-root{
@@ -55,7 +70,13 @@
         width: 90%;
         height:5vh;
         border-radius: 0%;
-        font-family: "Arial";
+        font-family: 'Jost', sans-serif;
+    }
+
+    .submit:hover{
+        transition: 0.5s;
+        background-color: #5093b9;
+        cursor:pointer;
     }
     
 	.submit2 {
@@ -65,5 +86,11 @@
         width: 90%;
         height:5vh;
         border-radius: 0%;
-        font-family: "Arial";
-	}
+        font-family: 'Jost', sans-serif;
+    }
+    
+    .submit2:hover{
+        transition: 0.5s;
+        background-color: #5093b9;
+        cursor:pointer;
+    }

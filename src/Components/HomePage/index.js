@@ -11,16 +11,15 @@ function HomePage(props) {
 
 	return (
         <div className = "bodyb">
-		<main className="main1">
+		<div className="main1">
 			<div className="paper1">
-    				<div>¡BIENVENIDO!</div>
+    				<div className ="claseUno3" style={{color: "black", fontWeight: "bolder", fontSize: "20px", alignSelf:'center'}}>¡BIENVENIDO!</div>
                 <Link to={ROUTES.LOGIN}>
 				<button
 					type="submit"
 					fullWidth
 					variant="contained"
 					color="secondary"
-
 					className="submit6">
 					INGRESAR
           		</button>
@@ -31,14 +30,13 @@ function HomePage(props) {
 					fullWidth
 					variant="contained"
 					color="secondary"
-
 					className="submit7">
 					REGISTRARSE 
           		</button>
                   </Link>
 				
 			</div>
-		</main>
+		</div>
         </div>
 	)
 }

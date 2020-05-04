@@ -15,6 +15,7 @@ function Register(props) {
 	const [quote, setQuote] = useState('')
 
 	return (
+        <div className="bodyb3">
 		<main className="main2">
 			<div className="paper2">
             <div className="claseUno2">
@@ -55,7 +56,9 @@ function Register(props) {
 
 				</form>
 			</div>
+            
 		</main>
+        </div>
 	)
 
 	async function onRegister() {

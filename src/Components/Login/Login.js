@@ -13,7 +13,8 @@ function SignIn(props) {
 	const [password, setPassword] = useState('')
 
 	return (
-        <div style={{color:"blue"}}>
+        
+        <div className = "bodyb1">
 		<div className="main">
 			<div className="paper">
                 <div className="claseUno">
@@ -44,11 +45,11 @@ function SignIn(props) {
                          REGISTRARSE  </button>
                         </Link>
 						
-          			
+                        </div>	
 				</div>
 			</div>
 		</div>
-        </div>
+        
 	)
 
 	async function login() {

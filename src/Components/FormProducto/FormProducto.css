@@ -12,8 +12,8 @@
     flex-direction: 'column';
     font-family: 'Jost', sans-serif;
     font-size:18px;
-    width: 80vw;
-    height: 50vh;
+    width: 33vw;
+    height: 40vh;
     background: rgb(228, 230, 240);
     border-radius: 15px;
 }
@@ -26,21 +26,26 @@
 }
 
 .formato{
-    margin-top: 2vh;
-    margin-bottom:2vh;
+    margin-top: 3vh;
+    margin-bottom:3vh;
 }
-.fill{
-    margin-top: 2vh;
+
+.fillafuera{
+    margin-top: 3vh;
     margin-bottom:2vh;
     margin-left:2vw;
 }
 
+.fill{
+    margin-top: 4.2vh;
+    margin-bottom:2vh;
+    
+}
 
 
 .especificacion{
     color: rgb(128, 129, 131);
-    font-size:15px;
-    
+    font-size:15px;   
 }
 
 .botoncito2{
