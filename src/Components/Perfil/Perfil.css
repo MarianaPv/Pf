@@ -1,0 +1,140 @@
+.mainP{
+    display: flex;
+    flex-direction: 'column';
+    width:100vw;
+    height: 42.5vw;
+  
+}
+
+.bodyP {
+    height: 100%;
+    width:30%;
+    background:  rgb(228, 230, 240);
+    color: black;
+    text-align: center;
+    box-shadow: 1px 1px 8px 3px #888888;
+   
+}
+
+.imagen{
+    margin-top: 5vh;
+    width:10vw;
+    height: 10vw;
+    opacity: 0.8; 
+}
+
+.body2P {
+
+    color: black;
+    justify-content: center;
+}
+
+.contenido{
+    width:100%;
+    margin-top: 5vh;
+    font-family: 'Jost', sans-serif;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.cargo{
+
+    width:100%;
+    margin-top: 2vh;
+    font-family: 'Jost', sans-serif;
+    font-size: 17px;
+
+}
+
+.aclaracion{
+    margin-left: 5vw;
+    margin-top: 5vh;
+    font-family: 'Jost', sans-serif;
+    font-size: 15px;
+    color: rgb(127, 127, 128);
+    
+}
+
+.imagen2{
+    margin-right:22vw;
+    margin-top:18vw;
+    width: 3.5vw;
+    height: 3vw;
+}
+
+.imagen2:hover{
+    transition: 0.5s;
+    opacity: 0.6;
+  cursor:pointer;
+}
+
+.header{
+    margin-left: 5vw;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px; 
+    font-weight: bold;
+    margin-top: 3.5vh;
+
+}
+
+.header2{
+    margin-left: 5vw;
+    font-family: 'Jost', sans-serif;
+    font-size: 18px; 
+    font-weight: bold;
+    margin-top: 9vh;
+
+}
+
+.division{
+    display: flex;
+    flex-direction: 'column';
+    margin-left: 5vw;
+    margin-bottom: 3vh;
+    width:95%;
+    height:13%;
+    border-bottom: 1px solid rgba(108, 143, 196, 0.486) ;
+
+}
+
+.divisionAux{
+    display: flex;
+    flex-direction: 'column';
+    margin-left: 5vw;
+    margin-bottom: 3vh;
+    width:95%;
+    height:13%;
+    border-bottom: 1.2px solid rgb(108, 143, 196) ;
+}
+.contenido2{
+    margin-right: 1vw;
+    margin-top: 5vh;
+    font-family: 'Jost', sans-serif;
+    font-size: 16px;   
+}
+
+.division2{
+    margin-top:5vh;
+    margin-right: 5vw;
+    margin-bottom: 3vh; 
+}
+
+.botoncito3{
+    background: #00acee;
+    color:white;
+    width:8vw;
+    margin-left: 50vw;
+    margin-top: -5vh;
+    height:3.5vh;
+    font-weight: "bold";
+    border-radius: 8px;
+    border: none;
+    outline: none;
+    font-family: 'Jost', sans-serif;
+}
+
+.botoncito3:hover{
+    transition: 0.5s;
+  background-color: #5093b9;
+  cursor:pointer;
+}

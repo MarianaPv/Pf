@@ -26,8 +26,8 @@ function FormProducto() {
             "cantidadIngresada": " "
         }
         
-        let messageRef = firebase.database().ref('messages').orderByKey().limitToLast
-        firebase.database().ref('messages').push(resumen);
+        let messageRef = firebase.database().ref('messages')
+        firebase.database().ref('messages/'+referencia).update(resumen);
         alert("¡Se ha añadido su producto!");
     }
     

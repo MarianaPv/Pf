@@ -59,8 +59,8 @@ function Home(){
             "cantidadIngresada" :add
         }
         
-        let messageRef = firebase.database().ref('messages'+ele.referencia).orderByChild().limitToLast
-        firebase.database().ref('messages').update(resumen);
+        let messageRef = firebase.database().ref('messages').orderByKey( ).limitToLast
+        firebase.database().ref('messages/'+ele.referencia).update(resumen);
 
         }else{
 
