@@ -4,6 +4,8 @@ import { Link, withRouter } from 'react-router-dom'
 import firebase from '../../firebase'
 import * as ROUTES from "../../Routes/Routes.js";
 import "./Register.css";
+import app from "firebase/app";
+
 
 
 function Register(props) {
@@ -12,7 +14,6 @@ function Register(props) {
 	const [name, setName] = useState('')
 	const [email, setEmail] = useState('')
 	const [password, setPassword] = useState('')
-	const [quote, setQuote] = useState('')
 
 	return (
         <div className="bodyb3">
@@ -23,7 +24,7 @@ function Register(props) {
        			</div>
 				<form className="form" onSubmit={e => e.preventDefault() && false }>
 					<div margin="normal" required fullWidth>
-						<InputLabel htmlFor="name">Nombre</InputLabel>
+						<InputLabel htmlFor="name">Nombre de Usuario</InputLabel>
 						<Input id="name" name="name" autoComplete="off" autoFocus value={name} onChange={e => setName(e.target.value)} />
 					</div>
 					<div margin="normal" required fullWidth>
@@ -64,6 +65,7 @@ function Register(props) {
 	async function onRegister() {
 		try {
 			await firebase.register(name, email, password)
+			alert("¡Registro Exitoso!")
 			
 		} catch(error) {
 			alert(error.message)

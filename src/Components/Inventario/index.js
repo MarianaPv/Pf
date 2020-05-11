@@ -13,14 +13,21 @@ require('firebase/auth');
 require('firebase/database');
 
 
-function Home(){
+function Home(props){
     const [add, setAdd] = useState("")    
-    const [sub, setSub] = useState("") 
-    const [original, setOriginal] = useState("")
+    const [sub, setSub] = useState("")  
+    const [original, setOriginal] = useState("")      
     const [allData, setAllData] = useState([])
     const [id, setId] = useState("0")
     
-    
+    app.auth().onAuthStateChanged(user => {
+        if (!user) {
+            props.history.push("/");
+        }
+    });
+
+
+
     const getAllData = () =>{
         
         return app
@@ -43,29 +50,29 @@ function Home(){
 
 
     const handleSubmit = (ele) =>{
-
-        if(add>0){
-            setOriginal(ele.cantidadAlmacen-sub+parseInt(add));
+       
+        if (sub > ele.cantidadAlmacen){
+            alert("¡La cantidad en almacén es menor a la que se desea retirar!")
         }else{
+
+        let original = (add < 0) ? (ele.cantidadAlmacen-sub+(add)) : (ele.cantidadAlmacen-sub+parseInt(add)) 
             
-            setOriginal(ele.cantidadAlmacen-sub);
-        }
         
-        if ((add-sub)<ele.cantidadAlmacen){
+        console.log(ele)
+        console.log(add)
+        console.log(original)
+
             
         let resumen= {
             "cantidadAlmacen":original,
             "cantidadRetirada" :sub,
             "cantidadIngresada" :add
         }
-        
+
         let messageRef = firebase.database().ref('messages').orderByKey( ).limitToLast
         firebase.database().ref('messages/'+ele.referencia).update(resumen);
+    }
 
-        }else{
-
-            alert("¡Se intenta retirar más de la cantidad disponible de producto!");
-        }
     }
     
     let dataTable =  allData.length>0 && allData.map((ele,index) => {
@@ -75,13 +82,12 @@ function Home(){
                 <td>{ele.nombreItem}</td>
                 <td>{ele.referencia}</td>
                 <td>{ele.cantidadAlmacen}</td>
-                <td><input type = "text" onChange ={e => setSub(e.target.value)} id="inputText"/></td>
-                <td> <input type = "text" onChange ={e => setAdd(e.target.value)} id="inputText"/></td>
+                <td><input type = "number"onChange ={e => setSub(e.target.value)} id="inputText"/></td>
+                <td> <input type="number" onChange ={e => setAdd(e.target.value)} id="inputText"/></td>
                 <td>
                 <select>
-                    <option value="litro">litro</option>
-                    <option value="mililitro">mililitro</option>
-                    <option value="metro">metro</option>
+                    <option value="cartucho">{ele.unidad}</option>
+
                 </select>
                 </td>
                 <td id="extra"><button className="botoncito" onClick = {() => handleSubmit(ele)} >Guardar</button></td>

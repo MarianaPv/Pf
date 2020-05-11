@@ -39,11 +39,18 @@ class Firebase {
 
 	async register(name, email, password) {
 		await this.auth.createUserWithEmailAndPassword(email, password)
-		return this.auth.currentUser.updateProfile({
-			displayName: name
-		})
-	}
+		let resumen2= {
+			"usuario":name,
+			"correoElectronico" :email,
+			"contraseña" :password
+		}
 
+		let messageRef = firebase.database().ref('usuarios')
+		firebase.database().ref('usuarios/'+name).update(resumen2);
+		return this.auth.currentUser.updateProfile({displayName: name})
+			
+	}
+	
 
 	isInitialized() {
 		return new Promise(resolve => {

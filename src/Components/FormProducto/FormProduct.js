@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import { Link } from "react-router-dom";
 import "firebase/auth";
+import app from "firebase/app";
 import { withRouter } from "react-router-dom";
 import Navigation from "../NavBar/Navigation";
 import "./FormProducto.css";
@@ -11,19 +12,29 @@ var firebase = require('firebase/app');
 require('firebase/auth');
 require('firebase/database');
 
-function FormProducto() {
+function FormProducto(props) {
+
+  app.auth().onAuthStateChanged(user => {
+    if (!user) {
+        props.history.push("/");
+    }
+  });
+
  const [item, setItem] = useState('');
  const [referencia, setReferencia] = useState('');
  const [add, setAdd] = useState('');
+ const [unidad, setUnidad] = useState('');
 
     const handleSubmit2 = () =>{
+
         
         let resumen= {
             "nombreItem": item,
             "referencia": referencia,
             "cantidadAlmacen": add,
             "cantidadRetirada": " ",
-            "cantidadIngresada": " "
+            "cantidadIngresada": " ",
+            "unidad": unidad
         }
         
         let messageRef = firebase.database().ref('messages')
@@ -58,7 +69,7 @@ function FormProducto() {
             <input id="ingresar" onChange = {e => setAdd(e.target.value)}></input>
           </div>
           <div className="fill">
-            <input></input>
+            <input onChange = {e => setUnidad(e.target.value)}></input>
           </div>
         </div>
       </div>
