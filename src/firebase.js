@@ -48,7 +48,7 @@ class Firebase {
 		let messageRef = firebase.database().ref('usuarios')
 		firebase.database().ref('usuarios/'+name).update(resumen2);
 		return this.auth.currentUser.updateProfile({displayName: name})
-			
+		
 	}
 	
 

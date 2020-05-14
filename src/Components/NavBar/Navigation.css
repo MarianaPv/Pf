@@ -64,25 +64,12 @@
     margin-left: 77vw;
     display: block;
     flex-direction: row;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -ms-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out;
   }
   
-  .logout:hover {
-    -webkit-transform: scale(1.1);
-    -moz-transform: scale(1.1);
-    -ms-transform: scale(1.1);
-    -o-transform: scale(1.1);
-    transform: scale(1.1);
-  }
+
   
   @media (max-width: 769px) {
-    .logout {
-      display: none;
-    }
+
     .extra {
       display: none;
     }
