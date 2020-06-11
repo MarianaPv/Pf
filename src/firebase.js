@@ -42,7 +42,7 @@ class Firebase {
 		let resumen2= {
 			"usuario":name,
 			"correoElectronico" :email,
-			"contraseña" :password
+			
 		}
 
 		let messageRef = firebase.database().ref('usuarios')

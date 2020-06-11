@@ -32,7 +32,7 @@ function App() {
 	return firebaseInitialized !== false ? (
 		<div>
 			<CssBaseline />
-			<Router>
+			<Router basename="Pf">
 				<Switch>
         <Route exact path="/" component={HomePage} />
 					<Route exact path="/login" component={Login} />

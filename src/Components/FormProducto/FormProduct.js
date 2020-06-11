@@ -61,15 +61,15 @@ function FormProducto(props) {
           </div>
         </div>
         <div className="fillafuera">
-          <input id="item" onChange = {e => setItem(e.target.value)}></input>
+          <input autocomplete= "off" id="item" onChange = {e => setItem(e.target.value)}></input>
           <div className="fill">
-            <input id="referencia" onChange = {e => setReferencia(e.target.value)}></input>
+            <input autocomplete= "off" id="referencia" onChange = {e => setReferencia(e.target.value)}></input>
           </div>
           <div className="fill" >
-            <input id="ingresar" onChange = {e => setAdd(e.target.value)}></input>
+            <input autocomplete= "off" id="ingresar" onChange = {e => setAdd(e.target.value)}></input>
           </div>
           <div className="fill">
-            <input onChange = {e => setUnidad(e.target.value)}></input>
+            <input autocomplete= "off" onChange = {e => setUnidad(e.target.value)}></input>
           </div>
         </div>
       </div>

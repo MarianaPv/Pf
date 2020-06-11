@@ -6,7 +6,7 @@ import * as ROUTES from "./Routes/Routes";
 
 function Main() {
   return (
-    <Router basename="Diseno-Electronico">
+    <Router basename="Pf">
       <div>
         <Switch>
           <Route initial={true} exact path={ROUTES.HOME} component={App} />

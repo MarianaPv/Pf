@@ -19,6 +19,7 @@ function Home(props){
     const [original, setOriginal] = useState("")      
     const [allData, setAllData] = useState([])
     const [id, setId] = useState("0")
+    const [counter, setCounter] = useState(0)
     
     app.auth().onAuthStateChanged(user => {
         if (!user) {
@@ -29,33 +30,64 @@ function Home(props){
 
 
     const getAllData = () =>{
-        
+     
         return app
           .database()
           .ref("/messages")
-          .on("value", snapshot => {
+          .once("value", snapshot => {
             const firebaseData = _.toArray(snapshot.val());
             setAllData(firebaseData); 
+            
+            firebaseData.map(ele => {
+                firebase.database().ref('messages/'+ele.referencia).update({cantidadIngresada:0, cantidadRetirada:0})
+              })
         })
 
       }
 
+      const getAllData2 = () => {
+        return app
+        .database()
+        .ref("/messages")
+        .on("value", snapshot => {
+          const firebaseData = _.toArray(snapshot.val());
+          setAllData(firebaseData); 
+         
+      })
+      }
+    
+      const handleAdd = (ele, value) => {
+          let val = parseInt(value)
+        firebase.database().ref('messages/'+ele.referencia).update({cantidadIngresada:value})
+        console.log(ele, value)
+      }
+
+      const handleSub = (ele, value) => {
+        firebase.database().ref('messages/'+ele.referencia).update({cantidadRetirada:value})
+      }
+      
+      
       useEffect(() => {
         getAllData();
+        getAllData2()
+        
+      
       }, []);
 
       useEffect(() => {
-        console.log(allData)
+    
+    
+      
       }, [allData]);
 
 
     const handleSubmit = (ele) =>{
        
-        if (sub > ele.cantidadAlmacen){
+        if (ele.cantidadRetirada > ele.cantidadAlmacen){
             alert("¡La cantidad en almacén es menor a la que se desea retirar!")
         }else{
 
-        let original = (add < 0) ? (ele.cantidadAlmacen-sub+(add)) : (ele.cantidadAlmacen-sub+parseInt(add)) 
+        let original = (ele.cantidadIngresada < 0) ? (ele.cantidadAlmacen-ele.cantidadRetirada+(ele.cantidadIngresada)) : (ele.cantidadAlmacen-ele.cantidadRetirada+parseInt(ele.cantidadIngresada)) 
             
         
         console.log(ele)
@@ -65,8 +97,8 @@ function Home(props){
             
         let resumen= {
             "cantidadAlmacen":original,
-            "cantidadRetirada" :sub,
-            "cantidadIngresada" :add
+            "cantidadRetirada" :0,
+            "cantidadIngresada" :0
         }
 
         let messageRef = firebase.database().ref('messages').orderByKey( ).limitToLast
@@ -82,8 +114,8 @@ function Home(props){
                 <td>{ele.nombreItem}</td>
                 <td>{ele.referencia}</td>
                 <td>{ele.cantidadAlmacen}</td>
-                <td><input type = "number"onChange ={e => setSub(e.target.value)} id="inputText"/></td>
-                <td> <input type="number" onChange ={e => setAdd(e.target.value)} id="inputText"/></td>
+                <td><input type = "number"onChange ={e => handleSub(ele,e.target.value)} id="inputText" value={ele.cantidadRetirada}/></td>
+                <td> <input type="number" onChange ={e => handleAdd(ele, e.target.value)} id="inputText" value={ele.cantidadIngresada}/></td>
                 <td>
                 <select>
                     <option value="cartucho">{ele.unidad}</option>
@@ -122,4 +154,3 @@ function Home(props){
 
 
 export default withRouter(Home)
-                 

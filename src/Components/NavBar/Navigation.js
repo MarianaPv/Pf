@@ -27,7 +27,7 @@ function Navigation(props) {
               </li>
             </ul>
           </div>
-          <input className="logout" type="image" src="Logo.png" />
+          <input className="logout" type="image" src="https://firebasestorage.googleapis.com/v0/b/covid-277603.appspot.com/o/Logo.png?alt=media&token=35b42d6b-a53a-4264-9243-4b75888baa81" />
         </header>
       </section>
     </div>
